@@ -22,11 +22,19 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HCK-XH-XoI">
-                                <rect key="frame" x="172" y="497" width="30" height="30"/>
+                                <rect key="frame" x="202" y="497" width="31" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="&gt;"/>
+                                <state key="normal" title="播放"/>
                                 <connections>
                                     <action selector="btndwon:" destination="BYZ-38-t0r" eventType="touchDown" id="chp-V2-YPF"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KYY-cT-VNz">
+                                <rect key="frame" x="141" y="497" width="31" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="暂停"/>
+                                <connections>
+                                    <action selector="btnztdwon:" destination="BYZ-38-t0r" eventType="touchDown" id="5Pe-b4-w8k"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -34,10 +42,12 @@
                     </view>
                     <connections>
                         <outlet property="btnButton" destination="HCK-XH-XoI" id="iW5-Yf-wsc"/>
+                        <outlet property="btnZT" destination="KYY-cT-VNz" id="rkr-22-Fbo"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="117.59999999999999" y="112.89355322338831"/>
         </scene>
     </scenes>
 </document>

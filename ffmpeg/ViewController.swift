@@ -9,29 +9,50 @@
 import UIKit
 import MediaPlayer
 
+
 class ViewController: UIViewController {
 
+
+    
+    var videoURL:NSURL!
+    var player:AVPlayer!
+    var playerLayer:AVPlayerLayer!
+    
     @IBOutlet weak var btnButton: UIButton!
+    
+    @IBOutlet weak var btnZT: UIButton!
+    
     override func viewDidLoad() {
-        super.viewDidLoad()
+      
         // Do any additional setup after loading the view, typically from a nib.
-        //http://192.168.31.188/xxhhd.mp4
-        //http://192.168.31.188/aa.mp3
         
         
-        let videoURL = NSURL(string: "http://192.168.31.188/aa.mp3")
-        let player = AVPlayer(url: videoURL! as URL)
-        let playerLayer = AVPlayerLayer(player: player)
-        playerLayer.frame = CGRect(x: 10, y: 50, width: 300, height: 100)
+        super.viewDidLoad()
+        videoURL = NSURL(string: "http://192.168.31.188/xxhhd.mp4")
+        player = AVPlayer(url: videoURL! as URL)
+        playerLayer = AVPlayerLayer(player: player)
+        playerLayer.frame = self.view.bounds
+        
         self.view.layer.addSublayer(playerLayer)
         player.play()
         
+        //http://192.168.31.188/xxhhd.mp4
+        //http://192.168.31.188/aa.mp3
         
+        //self.moviePlayer.player
+        
+        //self.addNotification
+        
+ 
     }
-    
+    @IBAction func btnztdwon(_ sender: Any) {
+        
+         self.player!.pause()
+    }
 
     @IBAction func btndwon(_ sender: Any) {
         
+        self.player!.play()
         
     }
     override func didReceiveMemoryWarning() {
