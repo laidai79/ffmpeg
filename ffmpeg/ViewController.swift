@@ -11,14 +11,18 @@ import MediaPlayer
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var btnButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        //http://192.168.31.188/xxhhd.mp4
+        //http://192.168.31.188/aa.mp3
         
-        let videoURL = NSURL(string: "https://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4")
+        
+        let videoURL = NSURL(string: "http://192.168.31.188/aa.mp3")
         let player = AVPlayer(url: videoURL! as URL)
         let playerLayer = AVPlayerLayer(player: player)
-        playerLayer.frame = self.view.bounds
+        playerLayer.frame = CGRect(x: 10, y: 50, width: 300, height: 100)
         self.view.layer.addSublayer(playerLayer)
         player.play()
         
@@ -26,6 +30,10 @@ class ViewController: UIViewController {
     }
     
 
+    @IBAction func btndwon(_ sender: Any) {
+        
+        
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
